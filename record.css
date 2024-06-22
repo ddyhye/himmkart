@@ -1,0 +1,227 @@
+/* 영역 감춤, 노출 클래스 */
+.area-hidden {
+  display: none;
+}
+.area-visible {
+  display: flex;
+}
+
+/* 제목 폰트 */
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('PressStart2P-Regular.ttf') format('truetype');
+}
+
+/* 흔들리는 애니메이션 */
+@keyframes shake {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-6px); }
+    20% { transform: translateY(0); }
+    30% { transform: translateY(-6px); }
+    40% { transform: translateY(0); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+/* 기본 설정 */
+html, body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+
+}
+
+/* body 설정 */
+.headerBody {
+  display: flex;
+  height: 28vh;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  background-image: url('mario_sky_final.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.headerBody-img1, .headerBody-img2 {
+  display: flex;
+  height: 115%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.headerBody-Text {
+  display: flex;
+  width: 60vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headerBody-Text-title h1, .headerBody-Text-ranking h2 {
+  font-family: 'Press Start 2P', sans-serif;
+  text-shadow:
+    -5px -5px 0  #000,
+    5px -5px 0 #000,
+    -5px 5px 0 #000,
+    5px 5px 0 #000;
+}
+.headerBody-Text-title {
+  display: flex;
+  height: 15vh;
+  line-height:0.1;
+  flex-direction: row;
+  font-size: 260%;
+}
+.headerBody-Text-ranking {
+  display: flex;
+  height: 10vh;
+  flex-direction: row;
+  font-size: 180%;
+}
+.H {
+  color: blue;
+}
+.I {
+  color: yellow;
+}
+.M {
+  color: red;
+}
+.M2 {
+  color: green;
+}
+.K {
+  color: red;
+}
+.A {
+  color: green;
+}
+.R {
+  color: yellow;
+}
+.T {
+  color: blue;
+}
+
+.mainBody {
+  height: 62vh;
+  background-color: white;
+}
+.mainBody-gridMain {
+  display: flex;
+  height: 62vh;
+  flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-image: url('mario_sky_middle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mainBody-gridMain-item {
+  width: 100%;
+  height: 19%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid skyblue;
+  border-radius: 80px;
+  font-size: 5vh;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.item-ranking, .item-score, .item-name, .item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+  font-family: 'Press Start 2P', sans-serif;  
+}
+.item-ranking.first-rank {
+  font-size: 9vh;
+  -webkit-text-stroke: 5px black;
+  color: gold;
+}
+.item-ranking.second-rank {
+  font-size: 7vh;
+  -webkit-text-stroke: 5px black;
+  color: hotpink;
+}
+.item-ranking {
+  width: 15%;
+}
+.item-score {
+  font-size: 4vh;
+  width: 40%;
+}
+.item-name {
+  width: 23%;
+}
+.item-icon {
+  width: 7%;
+}
+.item-icon.gift {
+  animation: shake 3s infinite;
+}
+
+.footBody {
+  display: flex;
+  height: 10vh;
+  flex-direction: row;
+  background-image: url('mario_sky_bottom2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: white;
+}
+.footBody-Input {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+}
+.footBody-Input-score, .footBody-Input-name, .footBody-Input-phoneNum {
+  display: flex;
+  width: 33.33%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footBody-Input input[type="text"] {
+  width: 80%;
+  height: 60%;
+}
+.footBody-Input input[type="text"]::placeholder {
+  display: flex;
+  align-items: center;
+  font-size: 300%;  /* 원하는 폰트 크기로 변경 */
+}
+.footBody-Send {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+.footBody-Send-btn {
+  font-size: 150%;
+  background-color: lightgrey;
+  width: 60%;
+  height: 60%;  
+  color: black;  
+  font-family: 'Press Start 2P', sans-serif;  
+  padding: 10px 20px;  
+  border: 3px solid black;  
+  border-radius: 50px;
+  cursor: pointer;  
+  transition: background-color 0.3s;
+}
+.footBody-Send-btn:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+

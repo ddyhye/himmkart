@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIMM 오락관 점수 기록</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="record.css">
+</head>
+
+<body>
+  <div class="headerBody">
+    <img class="headerBody-img1" src="mario_mario.png" alt="Mario">
+    <div class="headerBody-Text">
+      <div class="headerBody-Text-ranking">
+        <h2 class="R3">R</h2>
+        <h2 class="A3">A</h2>
+        <h2 class="N3">N</h2>
+        <h2 class="K3">K</h2>
+	<!--<h1 class="I2">E&nbsp;</h1>-->
+        <h2 class="I3">I</h2>
+        <h2 class="N33">N</h2>
+        <h2 class="G3">G</h2>
+      </div>
+      <div class="headerBody-Text-title">
+        <h1 class="H">H</h1>
+        <h1 class="I">I</h1>
+        <h1 class="M">M</h1>
+        <h1 class="M2">M</h1>
+        <h1 class="K">K</h1>
+        <h1 class="A">A</h1>
+        <h1 class="R">R</h1>
+        <h1 class="T">T</h1>
+      </div>
+    </div>
+    <img class="headerBody-img2" src="mario_princess.png" alt="Princess">
+  </div>
+
+  <div class="mainBody">
+  </div>
+
+  <div class="footBody">
+    <div class="footBody-Input">
+      <div class="footBody-Input-score">
+	<!-- <p class="footBody-Input-score-text">Score: </p> -->
+	<input type="text" class="footBody-Input-score-int" placeholder="00:00:000">
+      </div>
+      <div class="footBody-Input-name">
+	 <!-- <p class="footBody-Input-name-text">Name: </p> -->
+	<input type="text" class="footBody-Input-name-int" placeholder="홍길동">
+      </div>
+      <div class="footBody-Input-phoneNum">
+	<!-- <p class="footBody-Input-phoneNum-text">Tel. </p> -->
+	<input type="text" class="footBody-Input-phoneNum-int" placeholder="000-0000-0000">
+      </div>
+    </div>
+    <div class="footBody-Send">
+      <button class="footBody-Send-btn">send</button>
+      <audio class="audio-play" style="display: none;"></audio>
+    </div>
+  </div>
+
+  <script src="record_script.js"></script>
+</body>
+
+</html>
